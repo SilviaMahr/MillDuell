@@ -11,11 +11,17 @@
   align-items: center;
   padding: 10px;
   border-radius: 12px;
-  transition: background-color 0.2s;
+  cursor: pointer; /* Ändert den Mauszeiger zu einer klickbaren Hand */
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 
   /* WICHTIG: Stellt sicher, dass die Karte exakt in den Parent-Container passt */
   width: 100%;
   box-sizing: border-box;
+}
+
+.match-item:hover {
+  background-color: #ffffff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 /* Aktiver Status (Weiße Karte) */
