@@ -18,13 +18,13 @@
 
 ---
 
-### US-1.2: Login & Logout [MUST]
+### US-1.2: LoginComponent & Logout [MUST]
 **As a** player,
 **I want to** log in and log out,
 **so that** I can securely access my account.
 
 **Acceptance Criteria:**
-- Login with email and password
+- LoginComponent with email and password
 - Successful login redirects to dashboard
 - Logout ends the session and redirects to login page
 

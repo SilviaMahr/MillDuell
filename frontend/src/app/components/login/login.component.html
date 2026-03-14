@@ -1,0 +1,35 @@
+<div class="login-container">
+
+  <div class="logo-box">
+    <h1>MillDuell</h1>
+  </div>
+
+  <div class="login-card">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          formControlName="email"
+          placeholder="eva@mill.at"
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="password">Passwort</label>
+        <input
+          type="password"
+          id="password"
+          formControlName="password"
+          placeholder="*******"
+        >
+      </div>
+
+      <button type="submit" class="submit-btn">Anmelden</button>
+
+    </form>
+  </div>
+
+</div>

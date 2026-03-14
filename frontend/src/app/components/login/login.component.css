@@ -1,0 +1,85 @@
+/* Container, der den gesamten Bildschirm einnimmt und das Hintergrundbild setzt */
+.login-container {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
+}
+
+/* Die weiße Box oben für den Titel */
+.logo-box {
+  background-color: #ffffff;
+  padding: 10px 40px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.logo-box h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: bold;
+  color: #000000;
+}
+
+/* Die Haupt-Login-Karte */
+.login-card {
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 320px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Abstände für die Formularfelder */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #333333;
+}
+
+.form-group input {
+  padding: 12px 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.form-group input:focus {
+  border-color: #333333;
+}
+
+/* Styling für den Anmelden-Button */
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #2c2c2c;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+  background-color: #1a1a1a;
+}
