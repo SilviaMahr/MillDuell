@@ -1,0 +1,95 @@
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #ffffff; /* Weißer Hintergrund */
+  font-family: Arial, sans-serif;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+/* --- Header / Logo --- */
+.dashboard-header {
+  margin-bottom: 60px;
+}
+
+.logo-image {
+  max-width: 100%;
+  height: auto;
+  width: 600px; /* Passe dies an die tatsächliche Größe deines Bildes an */
+}
+
+/* --- Content / Cards --- */
+.dashboard-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 1000px;
+  flex-wrap: wrap; /* Bricht um, wenn der Bildschirm zu klein wird */
+}
+
+.dashboard-card {
+  background-color: #d9d9d9; /* Das helle Grau aus dem Screenshot */
+  border-radius: 12px;
+  padding: 30px;
+  width: 250px;
+  min-height: 350px;
+  box-sizing: border-box;
+}
+
+.dashboard-card h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #000000;
+}
+
+.placeholder-text {
+  color: #666666;
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* --- Das Badge zwischen Karte 2 und 3 --- */
+.relative-container {
+  position: relative;
+}
+
+/* --- Footer Button --- */
+.dashboard-footer {
+  margin-top: 80px;
+}
+
+.info-button {
+  background-color: #d9d9d9;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 30px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #000000;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.info-button:hover {
+  background-color: #c0c0c0;
+}
+
+/* --- Responsive Anpassung --- */
+@media (max-width: 850px) {
+  .dashboard-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Badge-Position für kleine Bildschirme anpassen */
+  .chat-badge {
+    right: 10px;
+    bottom: -20px;
+    top: auto;
+  }
+}
