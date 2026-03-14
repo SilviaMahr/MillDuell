@@ -1,0 +1,98 @@
+.matches-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px; /* Etwas reduzierter Abstand, da das Padding der Karte schon Platz schafft */
+  margin-top: 15px;
+}
+
+/* Listeneintrag */
+.match-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 12px;
+  transition: background-color 0.2s;
+
+  /* WICHTIG: Stellt sicher, dass die Karte exakt in den Parent-Container passt */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Aktiver Status (Weiße Karte) */
+.active-turn-card {
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Avatar --- */
+.avatar-container {
+  position: relative;
+  margin-right: 15px;
+  /* WICHTIG: Verhindert, dass der Avatar zusammengedrückt wird */
+  flex-shrink: 0;
+}
+
+.avatar-circle {
+  width: 44px;
+  height: 44px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.online-dot {
+  position: absolute;
+  top: 0;
+  right: -2px;
+  width: 10px;
+  height: 10px;
+  background-color: #4caf50;
+  border-radius: 50%;
+  /* Optional: Kleiner Rand, damit er sich vom weißen Avatar abhebt */
+  border: 2px solid #d9d9d9;
+}
+
+/* --- Texte --- */
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /* WICHTIG: Nimmt den restlichen Platz ein, darf aber nicht breiter werden als möglich */
+  flex: 1;
+  min-width: 0;
+}
+
+.player-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 2px;
+
+  /* WICHTIG: Schneidet zu lange Namen sauber mit "..." ab */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.turn-status {
+  font-size: 13px;
+  color: #8b9298;
+  white-space: nowrap;
+}
+
+.turn-status.status-red {
+  color: #c72b2b;
+  font-weight: 600;
+}
+
+/* --- Roter Indikator-Punkt ganz rechts --- */
+.turn-indicator-dot {
+  margin-left: 10px; /* Abstand zum Text, wenn dieser nah herankommt */
+  width: 8px;
+  height: 8px;
+  background-color: #c72b2b;
+  border-radius: 50%;
+
+  /* WICHTIG: Verhindert, dass der Punkt oval zusammengedrückt wird */
+  flex-shrink: 0;
+}
