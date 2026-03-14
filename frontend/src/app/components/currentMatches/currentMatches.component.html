@@ -1,0 +1,35 @@
+<div class="matches-list">
+
+  @for (match of matches; track match.id) {
+    <div
+      class="match-item"
+      [class.active-turn-card]="match.isMyTurn"
+    >
+
+      <div class="avatar-container">
+        <div class="avatar-circle"></div>
+
+        @if (match.isOnline) {
+          <div class="online-dot"></div>
+        }
+      </div>
+
+      <div class="text-container">
+        <span class="player-name">{{ match.opponentName }}</span>
+
+        <span
+          class="turn-status"
+          [class.status-red]="match.isMyTurn"
+        >
+          {{ match.isMyTurn ? 'Du bist am Zug' : 'Gegner ist am Zug' }}
+        </span>
+      </div>
+
+      @if (match.isMyTurn) {
+        <div class="turn-indicator-dot"></div>
+      }
+
+    </div>
+  }
+
+</div>
